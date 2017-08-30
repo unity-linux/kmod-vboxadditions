@@ -104,7 +104,8 @@ Conflicts:	arch(x86_64)							\
 This package is a virtual rpm that aims to make sure you always have the	\
 latest prebuilt %{drvname} driver for kernel-%{1}.				\
 										\															
-%files -n %{drvname}-kernel-unity-%{1}-latest					\
+%files -n %{drvname}-kernel-unity-%{1}-latest					
+
 
 %ifarch %{ix86}
 %mkflavour desktop586
