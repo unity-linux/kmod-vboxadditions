@@ -86,7 +86,25 @@ Conflicts:	arch(x86_64)							\
 This package is a virtual rpm that aims to make sure you always have the	\
 latest prebuilt %{drvname} driver for kernel-%{1}.				\
 										\
-%files -n %{drvname}-kernel-%{1}-latest
+%files -n %{drvname}-kernel-%{1}-latest						\
+										\
+%package -n %{drvname}-kernel-unity-%{1}-latest					\
+Summary:	Virtual rpm for latest %{drvname}-kernel-%{1} driver		\
+License:	GPLv2								\
+URL:		http://www.virtualbox.org/					\
+Group:		System/Kernel and hardware					\
+Requires:	%{drvname}-kernel-%{kernver}-%{1}-%{kernrel} = %{version}-%{release} \
+%{expand:%%{?latest_obsoletes_%{1}:Obsoletes: %{latest_obsoletes_%{1}}}}	\
+%{expand:%%{?latest_provides_%{1}:Provides: %{latest_provides_%{1}}}}		\
+%ifarch %{ix86}									\
+Conflicts:	arch(x86_64)							\
+%endif										\
+										\
+%description -n %{drvname}-kernel-unity-%{1}-latest					\
+This package is a virtual rpm that aims to make sure you always have the	\
+latest prebuilt %{drvname} driver for kernel-%{1}.				\
+										\															
+%files -n %{drvname}-kernel-unity-%{1}-latest
 
 %ifarch %{ix86}
 %mkflavour desktop586
