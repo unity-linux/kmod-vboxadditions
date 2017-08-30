@@ -100,7 +100,7 @@ Requires:	%{drvname}-kernel-%{kernver}-%{1}-%{kernrel} = %{version}-%{release} \
 Conflicts:	arch(x86_64)							\
 %endif										\
 										\
-%description -n %{drvname}-kernel-unity-%{1}-latest					\
+%description -n %{drvname}-kernel-unity-%{1}-latest				\
 This package is a virtual rpm that aims to make sure you always have the	\
 latest prebuilt %{drvname} driver for kernel-%{1}.				\
 										\															
