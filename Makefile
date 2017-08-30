@@ -1,5 +1,5 @@
 NAME=kmod-vboxadditions
-DISTREL=3
+DISTREL=4
 VERSION=5.1.26
 KERNVER=4.12.8
 
