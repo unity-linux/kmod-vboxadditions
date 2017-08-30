@@ -46,9 +46,9 @@ Provides:	kmod(vboxsf.ko) = %{version}					\
 Provides:	kmod(vboxvideo.ko) = %{version}					\
 Requires(post): dkms-minimal							\
 Requires(preun): dkms-minimal							\
-Requires:	kernel-%{1}-%{kernver}-%{kernrel}				\
-Requires(post):	kernel-%{1}-%{kernver}-%{kernrel}				\
-Requires(preun): kernel-%{1}-%{kernver}-%{kernrel}				\
+Requires:	kernel-unity-%{1}-%{kernver}-%{kernrel}				\
+Requires(post):	kernel-unity-%{1}-%{kernver}-%{kernrel}				\
+Requires(preun): kernel-unity-%{1}-%{kernver}-%{kernrel}				\
 Recommends:	%{drvname}-kernel-%{1}-latest					\
 %ifarch %{ix86}									\
 Conflicts:	arch(x86_64)							\
